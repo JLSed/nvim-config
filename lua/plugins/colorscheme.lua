@@ -31,7 +31,7 @@ return {
 				foreground = "default", -- "default" or "saturated" (can also be a table like background)
 			})
 
-			-- setup must be called before loading
+			-- activates colorscheme
 			vim.cmd("colorscheme kanso")
 		end,
 	},
