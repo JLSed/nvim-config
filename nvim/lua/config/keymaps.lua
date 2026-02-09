@@ -35,7 +35,7 @@ map("n", "<C-M-i>", "<cmd>CopilotChatToggle<cr>", { desc = "CopilotChat - Toggle
 
 -- Inline Chat (VS Code: Ctrl+I)
 -- This opens a small input for a quick question about the current selection or line
-map({ "n", "v" }, "<C-i>", function()
+map({ "n", "v" }, "<leader>ci", function()
   local input = vim.fn.input("Quick Chat: ")
   if input ~= "" then
     require("CopilotChat").ask(input, { selection = require("CopilotChat.select").visual })
@@ -50,3 +50,11 @@ map("v", "<leader>ce", "<cmd>CopilotChatExplain<cr>", { desc = "CopilotChat - Ex
 
 -- Fix Code (VS Code: Right-click > Copilot > Fix)
 map("v", "<leader>cf", "<cmd>CopilotChatFix<cr>", { desc = "CopilotChat - Fix code" })
+
+-- Normal Mode: Toggle comment for current line
+map("n", "<C-/>", "gcc", { desc = "Toggle Comment", remap = true })
+map("n", "<C-_>", "gcc", { desc = "Toggle Comment", remap = true }) -- Fix for some terminals
+
+-- Visual Mode: Toggle comment for selection
+map("v", "<C-/>", "gc", { desc = "Toggle Comment", remap = true })
+map("v", "<C-_>", "gc", { desc = "Toggle Comment", remap = true })
