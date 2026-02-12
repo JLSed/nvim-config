@@ -21,14 +21,6 @@ map("n", "<leader><C-f>", function()
 end, { desc = "Toggle Spectre (Global Search)" })
 
 -- =============================================================================
--- VIM-VISUAL-MULTI (Multi-Cursors)
--- =============================================================================
-
--- Keybind to trigger VM Find (analogous to Ctrl+D in VS Code)
--- Default is usually <C-n>, but let's map it to something consistent with your style
-map("n", "<leader>d", "<Plug>(VM-Find-Under)", { desc = "VM: Select word and find next" })
--- COPILOT CHAT (VS Code Style)
--- =============================================================================
 
 -- Toggle Chat Sidebar (VS Code: Ctrl+Alt+I)
 map("n", "<C-M-i>", "<cmd>CopilotChatToggle<cr>", { desc = "CopilotChat - Toggle" })
