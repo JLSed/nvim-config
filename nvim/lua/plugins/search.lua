@@ -30,6 +30,7 @@ return {
 
         -- Find Under (The VS Code Ctrl+D equivalent)
         ["Find Under"] = "<C-n>", -- C-n is the default, but you can change it here!
+        ["I Return"] = "",
       }
     end,
   },
